@@ -7,7 +7,6 @@ function watchForm(){
     event.preventDefault();
     getGameInfo();
     getTubeInfo();
-    // getWikiInfo();
     })
 }
 
@@ -76,32 +75,3 @@ function displayTube(tubeResponse){
     $('#tubeResults').removeClass('hidden')
 
 }
-
-// function getWikiInfo(){
-//     var inputVal = $(".searchBox").val();
-
-//     // const searchUrl = `https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=Crazy Kong`;
-//     const searchUrl = `https://cors-anywhere.herokuapp.com/https://serpapi.com/search?q=Donkey+Kong&tbm=isch&ijn=0`;
-
-//     fetch(searchUrl)
-//     .then(response => response.json())
-//     .then(wikiResponse => {
-//         console.log(wikiResponse);
-        
-//         return wikiResponse;
-//     })
-//     .then(wikiResponse => displayWiki(wikiResponse, inputVal))
-// }
-
-// function displayWiki(wikiResponse){
-//     $('#results-list3').empty();
-//     console.log(wikiResponse)
-//     $('#results-list3').append(
-//         `<li>
-//         <a href="${wikiResponse[3][0]}" target="_blank"><h2>${wikiResponse[1][0]}</h2>
-//         </li>`
-//     )
-    
-//     $('#wikiResults').removeClass('hidden')
-// };
-    
