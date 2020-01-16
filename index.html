@@ -3,24 +3,42 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Video Game Search Zone</title>
+        <title>Arcade Game Search Zone</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>Welcome to the Video Game Search Zone</h1>
-        <p>Looking for information on a specific video game? Search for one below to recieve information, videos and wiki</p>
+        <h1>Welcome to the Arcade Game Search Zone</h1>
+        <p>Looking for information on a specific Arcade game? Search for one below to recieve information about game and videos</p>
         <form>
-            <input class="searchBox" type="text">
+            <input class="searchBox" type="text" placeholder="e.g. Donkey Kong">
             <input class="submitButton" type="submit">
         </form>
+
+        <section id="results" class="hidden info">
+            <h2>Search Results:</h2>
+            <ul id="results-list">
+            </ul>
+        </section>
+
+        <section id="tubeResults" class="hidden tube">
+            <h2>You Tube:</h2>
+            <ul id="results-list2">
+            </ul>
+        </section> 
+
+        <section id="wikiResults" class="hidden wiki">
+            <h2>Wiki:</h2>
+            <ul id="results-list3">
+            </ul>
+        </section>  
         
         
         <script src="script.js" async defer></script>
-        <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
     </body>
 </html>
