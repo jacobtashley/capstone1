@@ -11,33 +11,38 @@
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1>Welcome to the Arcade Game Search Zone</h1>
-        <p>Looking for information on a specific Arcade game? Search for one below to recieve information about game and videos</p>
+        <a name="top"></a>
+        <h1>Classic Arcade Game Info</h1>
+        <p>Search for you favorite Arcade Game below to recieve information about the game and videos!
+        </p>
         <form>
-            <input class="searchBox" type="text" placeholder="e.g. Donkey Kong">
-            <input class="submitButton" type="submit">
+            <div class="containerOne">
+                <input class="searchBox" type="text" placeholder="e.g. Donkey Kong">
+            </div> 
+            <div class="containerTwo">
+                <input class="submitButton" type="submit" value="Search">
+            </div>  
         </form>
 
-        <section id="results" class="hidden info">
-            <h2>Search Results:</h2>
-            <ul id="results-list">
-            </ul>
-        </section>
+        <div class="arrow hidden">
+            <a href="#top"><img id="arrowImage" src="images/boxArrow.jpg"><a href="#top"></a>
+        </div>
 
-        <section id="tubeResults" class="hidden tube">
-            <h2>You Tube:</h2>
-            <ul id="results-list2">
-            </ul>
-        </section> 
+        <div class="infoContainer hidden">
+            <section id="infoResults" class="hidden info">
+            </section>
+        </div>
 
-        <section id="wikiResults" class="hidden wiki">
-            <h2>Wiki:</h2>
-            <ul id="results-list3">
-            </ul>
-        </section>  
-        
+        <div class="tubeContainer hidden">
+            <section id="tubeResults" class="hidden tube">
+                <input id="youTubeLogo" type="image" src="images/youtube.png">
+                <p id="results-list2">
+                </p>
+            </section> 
+        </div>
         
         <script src="script.js" async defer></script>
     </body>

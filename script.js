@@ -2,6 +2,16 @@
 
 watchForm();
 
+$(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > 425) {
+        $('.arrow').removeClass('hidden')
+        $('#arrowImage').fadeIn();
+    } else {
+      $('#arrowImage').fadeOut();
+    }
+  });
+
 function watchForm(){
     $('form').submit(event => {
     event.preventDefault();
@@ -17,11 +27,6 @@ function getGameInfo(){
 
     fetch(searchUrl)
     .then(response => response.json())
-    .then(newResponse => {
-        console.log(newResponse);
-        
-        return newResponse;
-    })
     .then(newResponse => displayResults(newResponse, inputVal))
 }
 
@@ -32,19 +37,19 @@ function displayResults(newResponse) {
           item.platforms &&
           item.platforms.find(platform => platform.name === "Arcade")
       );
-      console.log(filteredResults);
     
-    $('#results-list').empty();
+    $('#infoResults').empty();
 
     for(let i = 0; i < filteredResults.length; i++) {
-        $('#results-list').append(
-            `<li>
-            <h2>${filteredResults[i].name}</h2>
-            <input type="image" src="${filteredResults[i].image.small_url}">
-            <h3>${filteredResults[i].description}</h3>
-            </li>`)
+        $('#infoResults').append(
+            `
+            <input id="imageOne" type="image" src="${filteredResults[i].image.small_url}">
+            <p>${filteredResults[i].description}</p>
+            `
+        )
     }
-    $('#results').removeClass('hidden')
+    $('#infoResults').removeClass('hidden')
+    $('.infoContainer').removeClass('hidden')
 }
 
 function getTubeInfo(){
@@ -54,11 +59,6 @@ function getTubeInfo(){
 
     fetch(searchUrl)
     .then(response => response.json())
-    .then(tubeResponse => {
-        console.log(tubeResponse);
-        
-        return tubeResponse;
-    })
     .then(tubeResponse => displayTube(tubeResponse, inputVal))
 }
 
@@ -67,11 +67,12 @@ function displayTube(tubeResponse){
     
     for(let i = 0; i < tubeResponse.items.length; i++) {
         $('#results-list2').append(
-            `<li>
+            `
             <a href="https://www.youtube.com/watch?v=${tubeResponse.items[i].id.videoId}" target="_blank"><h3>${tubeResponse.items[i].snippet.title}</h3></a>
-            <a href="https://www.youtube.com/watch?v=${tubeResponse.items[i].id.videoId}" target="_blank"><img src='${tubeResponse.items[i].snippet.thumbnails.default.url}'></a>
-            </li>`)
+            <a href="https://www.youtube.com/watch?v=${tubeResponse.items[i].id.videoId}" target="_blank"><img id="youTubeImages" src='${tubeResponse.items[i].snippet.thumbnails.medium.url}'></a>
+            `)
     }
     $('#tubeResults').removeClass('hidden')
+    $('.tubeContainer').removeClass('hidden')
 
 }
