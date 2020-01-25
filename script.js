@@ -15,19 +15,22 @@ $(document).scroll(function() {
 function watchForm(){
     $('form').submit(event => {
     event.preventDefault();
-    getGameInfo();
-    getTubeInfo();
+    getGameInfo(getTubeInfo);
     })
 }
 
-function getGameInfo(){
+function getGameInfo(cb){
     var inputVal = $(".searchBox").val();
 
     const searchUrl = `https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=a6341e2763bab65b72518f7d85807ecba870afae&format=json&query=${inputVal}&field_list=name,platforms,image,description&resource_type=game`;
 
     fetch(searchUrl)
     .then(response => response.json())
-    .then(newResponse => displayResults(newResponse, inputVal))
+    .then(newResponse => {
+      displayResults(newResponse, inputVal);
+      cb();
+    });
+    
 }
 
 function displayResults(newResponse) {
@@ -55,7 +58,8 @@ function displayResults(newResponse) {
     $('#infoResults').fadeIn(1500);
 }
 
-function getTubeInfo(){
+
+function getTubeInfo(cb){
     var inputVal = $(".searchBox").val();
 
     const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q="${inputVal}+Arcade+Gameplay"&maxResults=3&key=AIzaSyBS0DdV2r80IS0_n1RsSpn2NTP2NP_xDBQ`;
@@ -63,6 +67,7 @@ function getTubeInfo(){
     fetch(searchUrl)
     .then(response => response.json())
     .then(tubeResponse => displayTube(tubeResponse, inputVal))
+    cb()
 }
 
 function displayTube(tubeResponse){
