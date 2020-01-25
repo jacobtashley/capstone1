@@ -1,4 +1,7 @@
-
+*{
+    padding: 0;
+    margin: 0;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -9,11 +12,28 @@ h1 {
     color: white;
 }
 
-p{
+header p{
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     text-align: center;
     color: white;
+    padding: 20px;
+}
+
+main p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+footer p{
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    padding: 1px;
 }
 
 .hidden {
@@ -26,12 +46,13 @@ body{
 }
 
 .searchBox {
-    width: 300px;
+    width: 250px;
     height: 60px;
     position: relative;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     border-radius: 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -62,10 +83,8 @@ body{
     text-align: center;
     border: white 10px solid;
     border-radius: 10px;
-    margin-top: 10%;
     color: white;
     background-color: light;
-    padding: 10px;
     
 }
 
@@ -80,11 +99,15 @@ figure {
 img{
     display: block;
     position: relative;
+    margin-right: auto;
+    margin-left: auto;
     max-width: 100%;
 }
 
 #imageOne {
     display: block;
+    margin-right: auto;
+    margin-left: auto;
     max-width: 100%;
 }
 
@@ -107,12 +130,17 @@ img{
     text-align: center;
 }
 
+.tubeContainer p {
+    font-size: 15px;
+}
+
 #youTubeImages{
     display: block;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 a {
     color: white;
@@ -126,4 +154,102 @@ a {
     border: white 5px solid ;
     border-radius: 10px;
     z-index: 1;
+}
+
+header{
+    padding: 20px;
+}
+
+main {
+    padding: 30px 20px;
+    min-height: 800px;
+}
+
+footer {
+    font-size: 35px;
+    color: black;
+    text-align: center;
+    background-color: #F79FFD;
+    padding: 10px;
+
+}
+
+@media only screen and (min-width: 760px) {
+    #imageOne {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 100%;
+    }
+
+    #youTubeLogo{
+        display: block;
+        position: relative;
+        max-width: 50%;
+        padding-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #arrowImage{
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        width: 80px;
+        border: white 5px solid ;
+        border-radius: 10px;
+        z-index: 1;
+    }
+
+    figure {
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+        
+    }
+
+    img{
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+    header p{
+        font-size: 30px;
+}
+
+@media only screen and (min-width: 760px) {   
+    h1 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 80px;
+        text-align: center;
+        color: white;
+    }
+
+    .infoContainer{
+        margin-right: 10%;
+        margin-left: 10%;
+        text-align: center;
+        border: white 10px solid;
+        border-radius: 10px;
+        color: white;
+        background-color: light;
+        padding: 15px;
+        
+    }
+
+    .tubeContainer {
+        margin-right: 10%;
+        margin-left: 10%;
+        font-family: 'Raleway', sans-serif;
+        position: relative;
+        border: white 10px solid;
+        border-radius: 10px;
+        color: white;
+        margin-top: 20px;
+        text-align: center;
+    }
 }

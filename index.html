@@ -11,38 +11,46 @@
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway|Amatic+SC&display=swap" rel="stylesheet">
     </head>
     <body>
-        <a name="top"></a>
-        <h1>Classic Arcade Game Info</h1>
-        <p>Search for you favorite Arcade Game below to recieve information about the game and videos!
-        </p>
-        <form>
-            <div class="containerOne">
-                <input class="searchBox" type="text" placeholder="e.g. Donkey Kong">
-            </div> 
-            <div class="containerTwo">
-                <input class="submitButton" type="submit" value="Search">
-            </div>  
-        </form>
+        <header>
+            <a name="top"></a>
+            <h1>Classic Arcade Game Info</h1>
+            <p>Search for you favorite Arcade Game below to recieve information about the game and videos!
+            </p>
+            <form>
+                <div class="containerOne">
+                    <input class="searchBox" type="text" placeholder="e.g. Donkey Kong">
+                </div> 
+                <div class="containerTwo">
+                    <input class="submitButton" type="submit" value="Search">
+                </div>  
+            </form>
+        </header>
+        <main>
+            <div class="arrow hidden">
+                <a href="#top"><img id="arrowImage" src="images/boxArrow.jpg"><a href="#top"></a>
+            </div>
 
-        <div class="arrow hidden">
-            <a href="#top"><img id="arrowImage" src="images/boxArrow.jpg"><a href="#top"></a>
-        </div>
+            <div class="infoContainer hidden">
+                <section id="infoResults" class="hidden info">
+                </section>
+            </div>
 
-        <div class="infoContainer hidden">
-            <section id="infoResults" class="hidden info">
-            </section>
-        </div>
+            <div class="tubeContainer hidden">
+                <section id="tubeResults" class="hidden tube">
+                    <input id="youTubeLogo" type="image" src="images/youtube.png">
+                    <p id="results-list2">
+                    </p>
+                </section> 
+            </div>
+        </main>
 
-        <div class="tubeContainer hidden">
-            <section id="tubeResults" class="hidden tube">
-                <input id="youTubeLogo" type="image" src="images/youtube.png">
-                <p id="results-list2">
-                </p>
-            </section> 
-        </div>
+        <footer>
+            <p>Another fun site created by Jacob Ashley</p>
+        </footer>
+
         
         <script src="script.js" async defer></script>
     </body>

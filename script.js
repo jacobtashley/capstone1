@@ -10,7 +10,7 @@ $(document).scroll(function() {
     } else {
       $('#arrowImage').fadeOut();
     }
-  });
+});
 
 function watchForm(){
     $('form').submit(event => {
@@ -45,11 +45,14 @@ function displayResults(newResponse) {
             `
             <input id="imageOne" type="image" src="${filteredResults[i].image.small_url}">
             <p>${filteredResults[i].description}</p>
+            <p>All information being pulled from www.giantbomb.com<p>
             `
         )
     }
-    $('#infoResults').removeClass('hidden')
-    $('.infoContainer').removeClass('hidden')
+    // $('#infoResults').removeClass('hidden')
+    // $('.infoContainer').removeClass('hidden')
+    $('.infoContainer').fadeIn(1500);
+    $('#infoResults').fadeIn(1500);
 }
 
 function getTubeInfo(){
@@ -72,7 +75,6 @@ function displayTube(tubeResponse){
             <a href="https://www.youtube.com/watch?v=${tubeResponse.items[i].id.videoId}" target="_blank"><img id="youTubeImages" src='${tubeResponse.items[i].snippet.thumbnails.medium.url}'></a>
             `)
     }
-    $('#tubeResults').removeClass('hidden')
-    $('.tubeContainer').removeClass('hidden')
-
+    $('#tubeResults').fadeIn(3000);
+    $('.tubeContainer').fadeIn(3000);
 }
