@@ -3,8 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Arcade Game Search Zone</title>
-        <meta name="description" content="">
+        <title>Classic Arcade Game Info</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
         <script
@@ -14,44 +13,74 @@
         <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway|Amatic+SC&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
+        <header class="header">
+
             <a name="top"></a>
-            <h1>Classic Arcade Game Info</h1>
-            <p>Search for you favorite Arcade Game below to recieve information about the game and videos!
-            </p>
+            
+                           
+            <div class="title">
+                <img src=images/jacob.jpg class="jacobLogo">
+                <h1> Classic Arcade Game Info</h1>
+            </div>
+             
+
+            <div class="headInfo">
+                <p>Search for you favorite Arcade Game below to recieve information about the game and videos!
+                </p>
+            </div>
+
+
             <form>
-                <div class="containerOne">
-                    <input class="searchBox" type="text" placeholder="e.g. Donkey Kong">
+                <div class="searchSection">
+                    <input class="searchBox" type="text" placeholder="e.g. Donkey Kong" required>
                 </div> 
-                <div class="containerTwo">
+                <div class="buttonSection">
                     <input class="submitButton" type="submit" value="Search">
                 </div>  
             </form>
+
         </header>
-        <main>
+        <main class="main">
+
             <div class="arrow hidden">
-                <a href="#top"><img id="arrowImage" src="images/boxArrow.jpg"><a href="#top"></a>
+                <a href="#top"><img class="arrowImage" src="images/boxArrow.jpg"><a href="#top"></a>
             </div>
 
+            <div class="loading">
+                <section class="loadingMessage">
+                </section>
+            </div>
+
+            <div class="errors">
+                <section class="errorMessage">
+                </section>
+            </div>
+
+           
             <div class="infoContainer hidden">
-                <section id="infoResults" class="hidden info">
+                <section class="infoResults hidden info">
                 </section>
             </div>
 
             <div class="tubeContainer hidden">
-                <section id="tubeResults" class="hidden tube">
-                    <input id="youTubeLogo" type="image" src="images/youtube.png">
-                    <p id="results-list2">
-                    </p>
+                <section class="tubeResults hidden tube">
+                    <input class="youTubeLogo" type="image" src="images/youtube.png" alt="YouTube Logo">
+                    <section class="tubeList">
+                    </section>
                 </section> 
             </div>
+            
+            
+            
         </main>
 
-        <footer>
+        <footer class="footer">
+
             <p>Another fun site created by Jacob Ashley</p>
+
         </footer>
 
-        
         <script src="script.js" async defer></script>
+
     </body>
 </html>

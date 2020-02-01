@@ -1,48 +1,82 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-html{
+
+html {
     scroll-behavior: smooth;
+    height: 100%;
 }
+
+.jacobLogo {
+    position: relative;
+    width: 80px;
+    border-radius: 100%;
+    left: 10px;
+}
+
+.title {
+    position: relative;
+    display: flex;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 h1 {
+    position: relative;
     font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+    text-align: left;
+    color: white;
+    left: 20px;
+    top: 7px;
+}
+
+.headInfo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+.headInfo p {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.errorMessage {
     font-size: 40px;
+    color: red;
     text-align: center;
-    color: white;
+    font-family: 'Raleway', sans-serif;
 }
 
-header p{
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
-    text-align: center;
+.loadingMessage {
+    font-size: 30px;
     color: white;
-    padding: 20px;
-}
-
-main p{
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
     text-align: center;
-    color: white;
-    padding: 15px;
-}
-
-footer p{
     font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    color: black;
-    padding: 1px;
 }
 
 .hidden {
     display: none;
 }
 
-body{
+body {
     background-image: url("images/stars.jpg");
     background-attachment: fixed;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.searchSection {
+    text-align: center;
 }
 
 .searchBox {
@@ -56,6 +90,10 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+.buttonSection {
+    text-align: center;
+}
+
 .submitButton {
     background-color: black;
     color: white;
@@ -67,51 +105,37 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
-.containerOne{
-   text-align: center;
-}
 
-.containerTwo {
-    text-align: center;
-    
-
-}
-
-.infoContainer{
+.infoContainer {
     margin-right: auto;
     margin-left: auto;
     text-align: center;
     border: white 10px solid;
     border-radius: 10px;
     color: white;
-    background-color: light;
+    margin: 20px;
     
 }
 
 figure {
     display: block;
+    font-size:15px;
     margin-left: auto;
     margin-right: auto;
     max-width: 90%;
+    font-style: italic;
+    padding: 10px;
     
 }
 
-img{
-    display: block;
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 100%;
-}
-
-#imageOne {
+.imageOne {
     display: block;
     margin-right: auto;
     margin-left: auto;
     max-width: 100%;
 }
 
-#youTubeLogo{
+.youTubeLogo {
     display: block;
     position: relative;
     max-width: 90%;
@@ -126,15 +150,15 @@ img{
     border: white 10px solid;
     border-radius: 10px;
     color: white;
-    margin-top: 20px;
     text-align: center;
+    margin: 20px;
 }
 
 .tubeContainer p {
     font-size: 15px;
 }
 
-#youTubeImages{
+.youTubeImages {
     display: block;
     max-width: 100%;
     margin-left: auto;
@@ -146,43 +170,96 @@ a {
     color: white;
 }
 
-#arrowImage{
+.arrowImage {
     position: fixed;
-    right: 30px;
+    right: 40px;
     bottom: 30px;
     width: 40px;
-    border: white 5px solid ;
+    border:  #F79FFD 3px solid ;
     border-radius: 10px;
     z-index: 1;
 }
 
-header{
+header {
     padding: 20px;
 }
 
 main {
     padding: 30px 20px;
-    min-height: 800px;
+    min-height: 100%;
+}
+
+.description {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    padding: 15px;
+}
+
+.credit {
+    color:  #F79FFD;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.infoResults h2 {
+    color: #F79FFD;
+    font-size: 40px;
+    padding: 10px;
 }
 
 footer {
+    flex-shrink: 0;
     font-size: 35px;
     color: black;
     text-align: center;
     background-color: #F79FFD;
     padding: 10px;
+    margin-top: auto;
 
 }
 
+.footer p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: black;
+    padding: 1px;
+}
+
 @media only screen and (min-width: 760px) {
-    #imageOne {
+
+    .jacobLogo {
+        width: 180px;
+    }
+    
+    .title {
+        width: 700px;
+    }
+    
+    h1 {
+        font-size: 50px;
+        top: 20px;
+    }
+
+    .headInfo {
+        width: 600px;
+    }
+
+    .headInfo p {
+        font-size: 30px;
+    }
+    
+    .imageOne {
         display: block;
         margin-right: auto;
         margin-left: auto;
         max-width: 100%;
     }
 
-    #youTubeLogo{
+    .youTubeLogo {
         display: block;
         position: relative;
         max-width: 50%;
@@ -191,12 +268,12 @@ footer {
         margin-left: auto;
     }
 
-    #arrowImage{
+    .arrowImage {
         position: fixed;
         right: 30px;
         bottom: 30px;
         width: 80px;
-        border: white 5px solid ;
+        border:  #F79FFD 5px solid ;
         border-radius: 10px;
         z-index: 1;
     }
@@ -210,46 +287,57 @@ footer {
         
     }
 
-    img{
+    img {
         display: block;
         position: relative;
         margin-left: auto;
         margin-right: auto;
         max-width: 100%;
     }
-    header p{
-        font-size: 30px;
-}
 
-@media only screen and (min-width: 760px) {   
-    h1 {
-        font-family: 'Press Start 2P', cursive;
-        font-size: 80px;
-        text-align: center;
-        color: white;
+    header p {
+        font-size: 30px;
     }
 
-    .infoContainer{
-        margin-right: 10%;
-        margin-left: 10%;
+}
+
+@media only screen and (min-width: 1200px) { 
+
+    
+  
+    .jacobLogo {
+        width: 240px;
+    }
+
+    
+    .title {
+        width: 1000px;
+    }
+    
+    h1 {
+        font-size: 70px;
+        top: 20px;
+    }
+
+    .infoContainer {
+        display: inline-block;
         text-align: center;
         border: white 10px solid;
         border-radius: 10px;
         color: white;
-        background-color: light;
-        padding: 15px;
+        width: 45%;
+        vertical-align: top;
         
     }
 
     .tubeContainer {
-        margin-right: 10%;
-        margin-left: 10%;
+        display: inline-block;
         font-family: 'Raleway', sans-serif;
-        position: relative;
         border: white 10px solid;
         border-radius: 10px;
         color: white;
-        margin-top: 20px;
         text-align: center;
+        width: 45%;
+        vertical-align: top;
     }
 }
