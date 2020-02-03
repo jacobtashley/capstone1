@@ -11,6 +11,7 @@ html {
 .jacobLogo {
     position: relative;
     width: 80px;
+    height: 80px;
     border-radius: 100%;
     left: 10px;
 }
@@ -125,7 +126,6 @@ figure {
     max-width: 90%;
     font-style: italic;
     padding: 10px;
-    
 }
 
 .imageOne {
@@ -218,7 +218,6 @@ footer {
     background-color: #F79FFD;
     padding: 10px;
     margin-top: auto;
-
 }
 
 .footer p {
@@ -233,6 +232,7 @@ footer {
 
     .jacobLogo {
         width: 180px;
+        height: 180px;
     }
     
     .title {
@@ -284,7 +284,6 @@ footer {
         margin-left: auto;
         margin-right: auto;
         max-width: 100%;
-        
     }
 
     img {
@@ -303,13 +302,11 @@ footer {
 
 @media only screen and (min-width: 1200px) { 
 
-    
-  
     .jacobLogo {
         width: 240px;
+        height: 240px;
     }
 
-    
     .title {
         width: 1000px;
     }
@@ -327,7 +324,6 @@ footer {
         color: white;
         width: 45%;
         vertical-align: top;
-        
     }
 
     .tubeContainer {
