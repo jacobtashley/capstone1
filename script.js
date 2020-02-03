@@ -2,17 +2,19 @@
 
 watchForm();
 
+//Hides containers before showing//
 $('.infoContainer').hide();
 $('.tubeContainer').hide();
 
+//Waits for "Search" button to be clicked//
 function watchForm() {
-
     $('form').submit(event => {
-    event.preventDefault()
-    getGameInfo()
+        event.preventDefault()
+        getGameInfo()
     })
 }
 
+//Where magic happens. Searches if Game API has info on gaem, then displays it, then runs YouTube API call// 
 function getGameInfo() {
     var inputVal = $(".searchBox").val();
 
@@ -57,6 +59,7 @@ function getGameInfo() {
     })
 }
 
+//displays Game API info to DOM//
 function displayResults(filteredResults) {
     
     $('.infoResults').empty();
@@ -79,7 +82,7 @@ function displayResults(filteredResults) {
     $('.infoResults').fadeIn(1500);
 }
 
-
+//Calls YouTube API for info//
 function getTubeInfo() {
     var inputVal = $('.searchBox').val();
 
@@ -90,6 +93,7 @@ function getTubeInfo() {
     .then(tubeResponse => displayTube(tubeResponse, inputVal))
 }
 
+//Displays YouTube API info to DOM//
 function displayTube(tubeResponse){
     $('.tubeList').empty();
     
