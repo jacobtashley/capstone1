@@ -3,7 +3,7 @@
 <p>A place to answer all your classic arcade game questions! From Space Invaders & Pac Man, to Donkey Kong & Galaga, this app delivers information on any arcade game, along with YouTube links to show videos of the gameplay of each game!</p>
 
 <h2>Live Demo:</h2> 
-<p>https://jacobtashley.github.io/capstone1/</p>
+<p>https://jacobtashley.github.io/classic-arcade-game-info/</p>
 
 <img src="images/screen1.png">
 
