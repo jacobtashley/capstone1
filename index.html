@@ -10,13 +10,13 @@
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Raleway|Amatic+SC&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P%7CRaleway%7CAmatic+SC&display=swap" rel="stylesheet">
     </head>
     <body>
 
         <header class="header">
 
-            <a name="top"></a>
+            <a id="top"></a>
                
             <div class="title">
                 <img src=images/jacob.jpg class="jacobLogo" alt="cartoon Jacob head">
@@ -29,7 +29,9 @@
 
             <form>
                 <div class="searchSection">
+                    <label for="search">
                     <input class="searchBox" type="text" placeholder="e.g. Donkey Kong" required>
+                    </label>
                 </div> 
                 <div class="buttonSection">
                     <input class="submitButton" type="submit" value="Search">
@@ -41,26 +43,29 @@
         <main class="main">
 
             <div class="arrow hidden">
-                <a href="#top"><img class="arrowImage" src="images/boxArrow.jpg"><a href="#top"></a>
+                <a href="#top"><img class="arrowImage" src="images/boxArrow.jpg" alt="arrow up image"></a>
             </div>
 
             <div class="loading">
-                <section class="loadingMessage"></section>
+                <p class="loadingMessage"></p>
             </div>
 
             <div class="errors">
-                <section class="errorMessage"></section>
+                <p class="errorMessage"></p>
             </div>
            
-            <div class="infoContainer hidden">
-                <section class="infoResults hidden info"></section>
-            </div>
+            <div class="mainContainer">
+                <div class="infoContainer hidden">
+                    <p class="infoResults hidden info"></p>
+                </div>
 
-            <div class="tubeContainer hidden">
-                <section class="tubeResults hidden tube">
-                    <input class="youTubeLogo" type="image" src="images/youtube.png" alt="YouTube Logo">
-                    <section class="tubeList"></section>
-                </section> 
+                <div class="tubeContainer hidden">
+                    <p class="tubeResults hidden tube">
+                        <input class="youTubeLogo" type="image" src="images/youtube.png" alt="YouTube Logo">
+                    </p> 
+                    <p class="tubeList"></p>
+                    
+                </div>
             </div>
             
         </main>

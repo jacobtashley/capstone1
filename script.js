@@ -1,6 +1,6 @@
 'use strict'
 
-watchForm();
+$( document ).ready(watchForm());
 
 //Hides containers before showing//
 $('.infoContainer').hide();
@@ -16,7 +16,7 @@ function watchForm() {
 
 //Where magic happens. Searches if Game API has info on gaem, then displays it, then runs YouTube API call// 
 function getGameInfo() {
-    var inputVal = $(".searchBox").val();
+    let inputVal = $(".searchBox").val();
 
     const searchUrl = `https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=a6341e2763bab65b72518f7d85807ecba870afae&format=json&query=${inputVal}&field_list=name,platforms,image,description&resource_type=game`;
 
@@ -53,8 +53,8 @@ function getGameInfo() {
         if(filteredResults.length > 0) {
             $('.loading').hide()
             $('.errorMessage').hide()
-            console.log(filteredResults)
             displayResults(filteredResults)
+            console.log(filteredResults)
             getTubeInfo()
         
         } else {
@@ -79,7 +79,7 @@ function displayResults(filteredResults) {
     for(let i = 0; i < filteredResults.length; i++) {
         $('.infoResults').append(
             `
-            <input class="imageOne" type="image" src="${filteredResults[i].image.small_url}">
+            <input class="imageOne" type="image" src="${filteredResults[i].image.small_url}" alt=>
             <div class="description">
                 <p>${filteredResults[i].description}</p>
             </div>
@@ -96,7 +96,7 @@ function displayResults(filteredResults) {
 
 //Calls YouTube API for info//
 function getTubeInfo() {
-    var inputVal = $('.searchBox').val();
+    let inputVal = $('.searchBox').val();
 
     const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q="${inputVal}+Arcade+Gameplay"&maxResults=3&key=AIzaSyBS0DdV2r80IS0_n1RsSpn2NTP2NP_xDBQ`;
 
@@ -134,7 +134,7 @@ function displayTube(tubeResponse){
 
 //Arrow "back to top" function//
 $(document).scroll(function() {
-    var y = $(this).scrollTop();
+    let y = $(this).scrollTop();
     if (y > 425) {
         $('.arrow').removeClass('hidden')
         $('.arrowImage').fadeIn();
