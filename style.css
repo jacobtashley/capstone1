@@ -87,7 +87,7 @@ body {
     text-align: center;
 }
 
-.searchBox {
+#searchBox {
     width: 250px;
     height: 60px;
     position: relative;
@@ -103,7 +103,7 @@ body {
     text-align: center;
 }
 
-.submitButton {
+#submitButton {
     background-color: black;
     color: white;
     border-radius: 10px;
