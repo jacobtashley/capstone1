@@ -37,7 +37,7 @@ h1 {
 .headInfo {
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
+    width: 250px;
 }
 
 .headInfo p {
@@ -168,13 +168,6 @@ figure img{
     font-size: 15px;
 }
 
-.youTubeImages {
-    display: block;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .tubeList iFrame{
     max-width: 90%;
 }
@@ -190,10 +183,10 @@ a {
 
 .arrowImage {
     position: fixed;
-    right: 40px;
-    top: 80px;
+    right: 60px;
+    bottom: 80px;
     width: 40px;
-    border:  #F79FFD 3px solid ;
+    border:  #F79FFD 5px solid ;
     border-radius: 10px;
     z-index: 1;
 }
@@ -225,10 +218,10 @@ main {
 
 .infoResults h2 {
     color: #F79FFD;
-    font-size: 40px;
-    padding: 10px;
+    font-size: 35px;
     padding-top: 40px;
-    text-align: center;
+    padding-bottom: 10px;
+    text-align: left;
 }
 
 footer {
