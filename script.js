@@ -24,6 +24,7 @@ function getGameInfo() {
         return;
     }
 
+    $('.errorMessage').empty()
     $('.errorMessage').hide()
     $('.tubeResults').hide();
     $('.tubeContainer').hide();
@@ -35,7 +36,12 @@ function getGameInfo() {
    
 
     fetch(searchUrl)
-    .then(response => response.json())
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error(response.statusText)
+    })
     .then(newResponse => {
 
         let filteredResults = newResponse.results.filter(
@@ -47,6 +53,7 @@ function getGameInfo() {
         if(filteredResults.length > 0) {
             $('.loading').hide()
             $('.errorMessage').hide()
+            console.log(filteredResults)
             displayResults(filteredResults)
             getTubeInfo()
         
@@ -56,6 +63,11 @@ function getGameInfo() {
             $('.errorMessage').text('No information on this game. Please try again.')
         };
         
+    })
+    .catch(err => {
+        $('.loading').hide()
+        $('.errorMessage').show()
+        $('.errorMessage').append(`<p>Error: ${err.message}</p>`)
     })
 }
 
@@ -89,8 +101,18 @@ function getTubeInfo() {
     const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q="${inputVal}+Arcade+Gameplay"&maxResults=3&key=AIzaSyBS0DdV2r80IS0_n1RsSpn2NTP2NP_xDBQ`;
 
     fetch(searchUrl)
-    .then(response => response.json())
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        }
+        throw new Error(response.statusText)
+    })
     .then(tubeResponse => displayTube(tubeResponse, inputVal))
+    .catch(err => {
+        $('.loading').hide()
+        $('.errorMessage').show()
+        $('.errorMessage').append(`<p>Error: ${err.message}</p>`)
+    })
 }
 
 //Displays YouTube API info to DOM//
@@ -101,7 +123,7 @@ function displayTube(tubeResponse){
         $('.tubeList').append(
             `
             <a href="https://www.youtube.com/watch?v=${tubeResponse.items[i].id.videoId}" target="_blank"><h3>${tubeResponse.items[i].snippet.title}</h3></a>
-            <a href="https://www.youtube.com/watch?v=${tubeResponse.items[i].id.videoId}" target="_blank"><img class="youTubeImages" src="${tubeResponse.items[i].snippet.thumbnails.medium.url}" alt="Image Of Video"></a>
+            <iframe src="https://www.youtube.com/embed/${tubeResponse.items[i].id.videoId}"></iframe>
             `
         )
     }

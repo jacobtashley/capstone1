@@ -89,6 +89,7 @@ body {
     border-radius: 10px;
     font-size: 25px;
     font-family: 'Raleway', sans-serif;
+    padding-left: 10px;
 }
 
 .buttonSection {
@@ -110,22 +111,31 @@ body {
 .infoContainer {
     margin-right: auto;
     margin-left: auto;
-    text-align: center;
     border: white 10px solid;
     border-radius: 10px;
     color: white;
-    margin: 20px;
-    
+}
+
+.infoResults a {
+    text-decoration: none;
+    pointer-events: none;
 }
 
 figure {
-    display: block;
-    font-size:15px;
+    font-size: 20px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 90%;
     font-style: italic;
-    padding: 10px;
+    text-align: center;
+    width: 100% !important ;
+    padding-bottom: 10px;
+
+}
+
+figure img{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100% ;
 }
 
 .imageOne {
@@ -151,7 +161,7 @@ figure {
     border-radius: 10px;
     color: white;
     text-align: center;
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .tubeContainer p {
@@ -165,6 +175,14 @@ figure {
     margin-right: auto;
 }
 
+.tubeList iFrame{
+    max-width: 90%;
+}
+
+.tubeList h3{
+    font-size: 20px;
+    padding: 20px;
+}
 
 a {
     color: white;
@@ -173,7 +191,7 @@ a {
 .arrowImage {
     position: fixed;
     right: 40px;
-    bottom: 30px;
+    top: 80px;
     width: 40px;
     border:  #F79FFD 3px solid ;
     border-radius: 10px;
@@ -192,9 +210,9 @@ main {
 .description {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     color: white;
-    padding: 15px;
+    padding: 10px;
 }
 
 .credit {
@@ -202,12 +220,15 @@ main {
     font-family: 'Raleway', sans-serif;
     font-size: 20px;
     padding: 10px;
+    text-align: center;
 }
 
 .infoResults h2 {
     color: #F79FFD;
     font-size: 40px;
     padding: 10px;
+    padding-top: 40px;
+    text-align: center;
 }
 
 footer {
@@ -318,12 +339,12 @@ footer {
 
     .infoContainer {
         display: inline-block;
-        text-align: center;
         border: white 10px solid;
         border-radius: 10px;
         color: white;
         width: 45%;
         vertical-align: top;
+        margin: 20px;
     }
 
     .tubeContainer {
@@ -335,5 +356,14 @@ footer {
         text-align: center;
         width: 45%;
         vertical-align: top;
+    }
+
+    .youTubeLogo {
+        display: block;
+        position: relative;
+        max-width: 40%;
+        padding: 20px;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
