@@ -16,7 +16,7 @@ function watchForm() {
 
 //Where magic happens. Searches if Game API has info on gaem, then displays it, then runs YouTube API call// 
 function getGameInfo() {
-    let inputVal = $(".searchBox").val();
+    let inputVal = $("#searchBox").val();
 
     const searchUrl = `https://cors-anywhere.herokuapp.com/http://www.giantbomb.com/api/search/?api_key=a6341e2763bab65b72518f7d85807ecba870afae&format=json&query=${inputVal}&field_list=name,platforms,image,description&resource_type=game`;
 
