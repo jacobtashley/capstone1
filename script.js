@@ -96,7 +96,7 @@ function displayResults(filteredResults) {
 
 //Calls YouTube API for info//
 function getTubeInfo() {
-    let inputVal = $('.searchBox').val();
+    let inputVal = $('#searchBox').val();
 
     const searchUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&q="${inputVal}+Arcade+Gameplay"&maxResults=3&key=AIzaSyBS0DdV2r80IS0_n1RsSpn2NTP2NP_xDBQ`;
 
